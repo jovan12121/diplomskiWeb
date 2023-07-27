@@ -1,0 +1,296 @@
+name: dockercompose6681625038158109167
+services:
+  apigateway:
+    build:
+      context: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      dockerfile: ApiGateway/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: ApiGateway
+      target: base
+    container_name: apigateway
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: apigateway:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/ApiGateway.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "8001"
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\ApiGateway
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  mikroservis1:
+    build:
+      context: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      dockerfile: Mikroservis1/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Mikroservis1
+      target: base
+    container_name: user-api
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DB_HOST: userdb
+      DB_NAME: user
+      DB_SA_PASSWORD: password@12345#
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: mikroservis1:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/Mikroservis1.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "18002"
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\Mikroservis1
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  mikroservis2:
+    build:
+      context: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      dockerfile: Mikroservis2/Dockerfile
+      labels:
+        com.microsoft.created-by: visual-studio
+        com.microsoft.visual-studio.project-name: Mikroservis2
+      target: base
+    container_name: orderproduct-api
+    entrypoint:
+    - tail
+    - -f
+    - /dev/null
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ASPNETCORE_LOGGING__CONSOLE__DISABLECOLORS: "true"
+      DB_HOST: productorderdb
+      DB_NAME: productorder
+      DB_SA_PASSWORD: password@12345#
+      DOTNET_USE_POLLING_FILE_WATCHER: "1"
+      NUGET_FALLBACK_PACKAGES: /root/.nuget/fallbackpackages
+    image: mikroservis2:dev
+    labels:
+      com.microsoft.visualstudio.debuggee.arguments: ' --additionalProbingPath /root/.nuget/packages
+        --additionalProbingPath /root/.nuget/fallbackpackages  "/app/bin/Debug/net5.0/Mikroservis2.dll"'
+      com.microsoft.visualstudio.debuggee.killprogram: /bin/sh -c "if PID=$$(pidof
+        dotnet); then kill $$PID; fi"
+      com.microsoft.visualstudio.debuggee.program: dotnet
+      com.microsoft.visualstudio.debuggee.workingdirectory: /app
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "18003"
+      protocol: tcp
+    tty: true
+    volumes:
+    - type: bind
+      source: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\Mikroservis2
+      target: /app
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      target: /src
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\vsdbg\vs2017u5
+      target: /remote_debugger
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\.nuget\packages\
+      target: /root/.nuget/packages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages
+      target: /root/.nuget/fallbackpackages
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\AppData\Roaming/ASP.NET/Https
+      target: /root/.aspnet/https
+      read_only: true
+      bind:
+        create_host_path: true
+    - type: bind
+      source: C:\Users\jovan\AppData\Roaming/Microsoft/UserSecrets
+      target: /root/.microsoft/usersecrets
+      read_only: true
+      bind:
+        create_host_path: true
+  productorderdb:
+    container_name: productorderdb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "18005"
+      protocol: tcp
+  productsorderswebapi-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - mikroservis2
+    - -app-port
+    - "80"
+    - -components-path
+    - /components
+    depends_on:
+      mikroservis2:
+        condition: service_started
+    image: daprio/daprd:latest
+    network_mode: service:mikroservis2
+  userdb:
+    container_name: userdb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "18001"
+      protocol: tcp
+  users-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - mikroservis1
+    - -app-port
+    - "80"
+    - -components-path
+    - /components
+    depends_on:
+      mikroservis1:
+        condition: service_started
+    image: daprio/daprd:latest
+    network_mode: service:mikroservis1
+networks:
+  backend:
+    name: dockercompose6681625038158109167_backend

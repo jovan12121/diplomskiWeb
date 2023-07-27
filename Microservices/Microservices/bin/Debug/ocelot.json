@@ -1,0 +1,341 @@
+{
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/api/users/register",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/register"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/users/login",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/login"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/getUserData",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/getUserData"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/updateProfile",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/updateProfile"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/getSellers",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/getSellers"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/{username}/{v}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/{username}/{v}"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/changePassword",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/changePassword"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/registerGoogleUser",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/registerGoogleUser"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/loginGoogle",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/loginGoogle"
+
+    },
+
+    {
+      "UpstreamPathTemplate": "/api/users/getUserByUsername/{username}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "user-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/users/getUserByUsername/{username}"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/products/addProduct",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/products/addProduct"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/products/getProductsBySeller",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/products/getProductsBySeller"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/products/editProduct",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/products/editProduct"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/products/deleteProduct/{id}",
+      "UpstreamHttpMethod": [ "Delete" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/products/deleteProduct/{id}"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/products/getProductDetails/{id}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/products/getProductDetails/{id}"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/products/getAllProducts",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/products/getAllProducts"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/orders/addOrder",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/orders/addOrder"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/orders/getAllOrders",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/orders/getAllOrders"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/orders/getAllOrdersBuyer",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/orders/getAllOrdersBuyer"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/orders/cancel/{orderId}",
+      "UpstreamHttpMethod": [ "Put" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/orders/cancel/{orderId}"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/orders/getOrderDetailsAdmin/{orderId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/orders/getOrderDetailsAdmin/{orderId}"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/orders/getAllOrdersSeller",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/orders/getAllOrdersSeller"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/orders/getOrderDetailsSeller/{orderId}/{seller}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/orders/getOrderDetailsSeller/{orderId}/{seller}"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/payments/paywithstripe",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/payments/paywithstripe"
+
+    },
+    {
+      "UpstreamPathTemplate": "/api/payments/verifypaypalpayment",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orderproduct-api",
+          "Port": 80
+        }
+      ],
+      "DownstreamPathTemplate": "/api/payments/verifypaypalpayment"
+
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:8001"
+  }
+
+}

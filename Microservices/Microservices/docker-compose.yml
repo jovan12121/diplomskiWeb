@@ -1,0 +1,79 @@
+version: '3.4'
+
+networks:
+  backend:
+
+services:
+  userdb:
+    container_name: userdb
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+     - ACCEPT_EULA=Y
+     - SA_PASSWORD=password@12345#
+    networks:
+     - backend
+    ports:
+     - 18001:1433
+  mikroservis1:
+    container_name: user-api
+    image: ${DOCKER_REGISTRY-}mikroservis1
+    build:
+      context: .
+      dockerfile: Mikroservis1/Dockerfile
+    networks:
+        - backend
+    ports:
+        - 18002:80
+    environment:
+     - DB_HOST=userdb
+     - DB_NAME=user
+     - DB_SA_PASSWORD=password@12345#
+  productorderdb:
+     container_name: productorderdb
+     image: mcr.microsoft.com/mssql/server:2019-latest
+     environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=password@12345#
+     networks:
+      - backend
+     ports:
+        - 18005:1433
+  mikroservis2:
+    container_name: orderproduct-api
+    image: ${DOCKER_REGISTRY-}mikroservis2
+    build:
+      context: .
+      dockerfile: Mikroservis2/Dockerfile
+    networks:
+        - backend
+    ports:
+        - 18003:80
+    environment:
+     - DB_HOST=productorderdb
+     - DB_NAME=productorder
+     - DB_SA_PASSWORD=password@12345#
+
+
+  apigateway:
+    container_name: apigateway
+    image: ${DOCKER_REGISTRY-}apigateway
+    build:
+      context: .
+      dockerfile: ApiGateway/Dockerfile
+    ports:
+      - 8001:80
+    networks:
+      - backend
+
+  productsorderswebapi-dapr:
+    image: "daprio/daprd:latest"
+    command: [ "./daprd", "-app-id", "mikroservis2", "-app-port", "80",  "-components-path", "/components" ]
+    depends_on:
+      - mikroservis2
+    network_mode: "service:mikroservis2"
+  users-dapr:
+    image: "daprio/daprd:latest"
+    command: [ "./daprd", "-app-id", "mikroservis1", "-app-port", "80",  "-components-path", "/components" ]
+    depends_on:
+      - mikroservis1
+    network_mode: "service:mikroservis1"
