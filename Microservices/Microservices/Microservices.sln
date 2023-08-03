@@ -17,6 +17,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiGateway", "ApiGateway\Ap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logs", "Logs", "{C74E5810-377D-47F2-90BA-A5E8EC6C69F4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mikroservis3", "Mikroservis3\Mikroservis3.csproj", "{A3ACD413-4D1A-4104-85BD-481161652ED5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{CC18E699-F9CA-4AA9-871E-F8BCE7D04EB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC18E699-F9CA-4AA9-871E-F8BCE7D04EB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC18E699-F9CA-4AA9-871E-F8BCE7D04EB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3ACD413-4D1A-4104-85BD-481161652ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3ACD413-4D1A-4104-85BD-481161652ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3ACD413-4D1A-4104-85BD-481161652ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3ACD413-4D1A-4104-85BD-481161652ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{323BAA6C-F4E8-4D5B-8790-F9FDCC478D8A} = {543A2126-38FF-4EE0-8490-15E3093A90EC}
 		{CC18E699-F9CA-4AA9-871E-F8BCE7D04EB9} = {5F6BAFA9-974C-4CBB-82D0-1F9130A70784}
 		{C74E5810-377D-47F2-90BA-A5E8EC6C69F4} = {543A2126-38FF-4EE0-8490-15E3093A90EC}
+		{A3ACD413-4D1A-4104-85BD-481161652ED5} = {543A2126-38FF-4EE0-8490-15E3093A90EC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2C736E21-5333-4105-802D-60744C3F6F6F}

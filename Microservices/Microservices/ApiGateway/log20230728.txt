@@ -1,0 +1,408 @@
+﻿2023-07-28 18:50:15.590 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 18:50:26.822 +00:00 [INF] Response sent: 200
+2023-07-28 18:50:32.916 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:50:32.927 +00:00 [INF] Response sent: 204
+2023-07-28 18:50:32.948 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:50:39.648 +00:00 [INF] Response sent: 200
+2023-07-28 18:50:39.669 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:50:39.671 +00:00 [INF] Response sent: 204
+2023-07-28 18:50:39.684 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:50:39.850 +00:00 [INF] Response sent: 200
+2023-07-28 18:52:30.060 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:52:30.124 +00:00 [INF] Response sent: 204
+2023-07-28 18:52:30.165 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:52:31.200 +00:00 [INF] Response sent: 200
+2023-07-28 18:53:24.086 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/6
+2023-07-28 18:53:24.113 +00:00 [INF] Response sent: 204
+2023-07-28 18:53:24.272 +00:00 [INF] Request received: GET /api/products/getProductDetails/6
+2023-07-28 18:53:24.300 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/6
+2023-07-28 18:53:24.313 +00:00 [INF] Response sent: 204
+2023-07-28 18:53:24.339 +00:00 [INF] Request received: GET /api/products/getProductDetails/6
+2023-07-28 18:53:25.768 +00:00 [INF] Response sent: 200
+2023-07-28 18:53:25.790 +00:00 [INF] Response sent: 200
+2023-07-28 18:54:56.743 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:54:56.756 +00:00 [INF] Response sent: 204
+2023-07-28 18:54:56.850 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:54:57.322 +00:00 [INF] Response sent: 200
+2023-07-28 18:56:17.749 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:56:17.756 +00:00 [INF] Response sent: 204
+2023-07-28 18:56:17.796 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:56:18.344 +00:00 [INF] Response sent: 200
+2023-07-28 18:56:28.213 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:56:28.219 +00:00 [INF] Response sent: 204
+2023-07-28 18:56:28.251 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:56:28.252 +00:00 [INF] Response sent: 204
+2023-07-28 18:56:28.266 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:56:28.426 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:56:28.805 +00:00 [INF] Response sent: 200
+2023-07-28 18:56:28.873 +00:00 [INF] Response sent: 200
+2023-07-28 18:56:48.534 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:56:48.541 +00:00 [INF] Response sent: 204
+2023-07-28 18:56:48.555 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:56:49.015 +00:00 [INF] Response sent: 200
+2023-07-28 18:57:58.455 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:57:58.483 +00:00 [INF] Response sent: 204
+2023-07-28 18:57:58.542 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:57:59.056 +00:00 [INF] Response sent: 200
+2023-07-28 18:58:00.577 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:58:00.580 +00:00 [INF] Response sent: 204
+2023-07-28 18:58:00.600 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:58:01.287 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 18:58:01.378 +00:00 [INF] Response sent: 204
+2023-07-28 18:58:01.477 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 18:58:01.861 +00:00 [INF] Response sent: 200
+2023-07-28 18:58:01.903 +00:00 [INF] Response sent: 200
+2023-07-28 19:00:55.381 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:00:55.381 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:00:57.990 +00:00 [INF] Response sent: 200
+2023-07-28 19:00:57.993 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:02.512 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:01:02.516 +00:00 [INF] Response sent: 204
+2023-07-28 19:01:02.518 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:01:02.525 +00:00 [INF] Response sent: 204
+2023-07-28 19:01:02.528 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:01:02.537 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:01:03.426 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:03.922 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:15.891 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:01:15.893 +00:00 [INF] Response sent: 204
+2023-07-28 19:01:15.901 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:01:16.188 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:16.197 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:01:16.540 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:26.205 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:01:26.208 +00:00 [INF] Response sent: 204
+2023-07-28 19:01:26.225 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:01:26.610 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:26.617 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:01:26.872 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:27.884 +00:00 [INF] Request received: OPTIONS /api/orders/getOrderDetailsAdmin/2
+2023-07-28 19:01:27.887 +00:00 [INF] Response sent: 204
+2023-07-28 19:01:27.898 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsAdmin/2
+2023-07-28 19:01:28.200 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:28.236 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsAdmin/2
+2023-07-28 19:01:28.541 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:31.414 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:01:31.520 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:01:31.721 +00:00 [INF] Response sent: 200
+2023-07-28 19:01:31.721 +00:00 [INF] Response sent: 200
+2023-07-28 19:03:27.147 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:03:27.148 +00:00 [INF] Response sent: 204
+2023-07-28 19:03:27.148 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:03:27.172 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:03:27.193 +00:00 [INF] Response sent: 204
+2023-07-28 19:03:27.257 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:03:27.951 +00:00 [INF] Response sent: 200
+2023-07-28 19:03:28.136 +00:00 [INF] Response sent: 200
+2023-07-28 19:03:29.886 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:03:30.237 +00:00 [INF] Response sent: 200
+2023-07-28 19:04:57.072 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/8
+2023-07-28 19:04:57.072 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/8
+2023-07-28 19:04:57.078 +00:00 [INF] Response sent: 204
+2023-07-28 19:04:57.079 +00:00 [INF] Response sent: 204
+2023-07-28 19:04:57.108 +00:00 [INF] Request received: GET /api/products/getProductDetails/8
+2023-07-28 19:04:57.149 +00:00 [INF] Request received: GET /api/products/getProductDetails/8
+2023-07-28 19:04:57.957 +00:00 [INF] Response sent: 200
+2023-07-28 19:04:58.297 +00:00 [INF] Response sent: 200
+2023-07-28 19:05:02.724 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:05:02.727 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:05:03.481 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:05:03.815 +00:00 [INF] Response sent: 200
+2023-07-28 19:05:03.842 +00:00 [INF] Response sent: 200
+2023-07-28 19:05:04.175 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:08.596 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:06:08.597 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:06:08.643 +00:00 [INF] Response sent: 204
+2023-07-28 19:06:08.644 +00:00 [INF] Response sent: 204
+2023-07-28 19:06:08.656 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:06:08.657 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:06:09.179 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:09.260 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:12.062 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:06:12.065 +00:00 [INF] Response sent: 204
+2023-07-28 19:06:12.074 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:06:12.291 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:12.348 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:06:12.734 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:33.982 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:06:34.004 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:06:34.588 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:34.588 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:41.614 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:06:42.260 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:43.501 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrders
+2023-07-28 19:06:43.501 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrders
+2023-07-28 19:06:43.503 +00:00 [INF] Response sent: 204
+2023-07-28 19:06:43.504 +00:00 [INF] Response sent: 204
+2023-07-28 19:06:43.523 +00:00 [INF] Request received: GET /api/orders/getAllOrders
+2023-07-28 19:06:43.526 +00:00 [INF] Request received: GET /api/orders/getAllOrders
+2023-07-28 19:06:44.000 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:44.001 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:45.069 +00:00 [INF] Request received: OPTIONS /api/users/getSellers
+2023-07-28 19:06:45.072 +00:00 [INF] Response sent: 204
+2023-07-28 19:06:45.084 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:06:45.982 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:45.992 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:06:46.347 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:51.984 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:06:51.984 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:06:52.529 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:52.578 +00:00 [INF] Response sent: 200
+2023-07-28 19:06:58.803 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:06:59.098 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:00.647 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersSeller
+2023-07-28 19:07:00.649 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:00.659 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersSeller
+2023-07-28 19:07:00.660 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:00.665 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:07:00.670 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:07:02.200 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:02.202 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:04.245 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:07:04.245 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:07:04.248 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:04.248 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:04.262 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:07:04.263 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:07:05.072 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:05.075 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:07.492 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:07:07.495 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:07:07.498 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:07.501 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:07.724 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:07:07.733 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:07:08.671 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:08.757 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:19.028 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:07:19.031 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:07:19.729 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:19.741 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:20.481 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:07:20.512 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:07:21.120 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:21.136 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:23.097 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:07:23.098 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:07:23.098 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:23.102 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:23.118 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:07:23.117 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:07:23.786 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:23.811 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:34.123 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:07:34.123 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:07:34.125 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:34.126 +00:00 [INF] Response sent: 204
+2023-07-28 19:07:34.174 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:07:34.216 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:07:34.792 +00:00 [INF] Response sent: 200
+2023-07-28 19:07:34.822 +00:00 [INF] Response sent: 200
+2023-07-28 19:09:17.247 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:09:17.251 +00:00 [INF] Response sent: 204
+2023-07-28 19:09:17.276 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:09:17.397 +00:00 [INF] Response sent: 200
+2023-07-28 19:09:21.441 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:09:21.447 +00:00 [INF] Response sent: 204
+2023-07-28 19:09:21.472 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:09:21.744 +00:00 [INF] Response sent: 200
+2023-07-28 19:09:21.750 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:09:21.885 +00:00 [INF] Response sent: 200
+2023-07-28 19:09:26.297 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:09:26.456 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:09:27.292 +00:00 [INF] Response sent: 200
+2023-07-28 19:09:27.292 +00:00 [INF] Response sent: 200
+2023-07-28 19:12:30.415 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:12:31.514 +00:00 [INF] Response sent: 200
+2023-07-28 19:12:33.332 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:12:33.334 +00:00 [INF] Response sent: 204
+2023-07-28 19:12:33.381 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:12:33.382 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:12:33.384 +00:00 [INF] Response sent: 204
+2023-07-28 19:12:33.451 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:12:34.744 +00:00 [INF] Response sent: 200
+2023-07-28 19:12:34.769 +00:00 [INF] Response sent: 200
+2023-07-28 19:12:36.279 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:12:36.279 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:12:36.281 +00:00 [INF] Response sent: 204
+2023-07-28 19:12:36.282 +00:00 [INF] Response sent: 204
+2023-07-28 19:12:36.293 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:12:36.301 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:12:36.828 +00:00 [INF] Response sent: 200
+2023-07-28 19:12:36.872 +00:00 [INF] Response sent: 200
+2023-07-28 19:13:18.613 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:13:18.616 +00:00 [INF] Response sent: 204
+2023-07-28 19:13:18.646 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:13:18.993 +00:00 [INF] Response sent: 200
+2023-07-28 19:13:19.002 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:13:19.595 +00:00 [INF] Response sent: 200
+2023-07-28 19:13:21.162 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:13:21.162 +00:00 [INF] Request received: OPTIONS /api/products/getProductDetails/1
+2023-07-28 19:13:21.165 +00:00 [INF] Response sent: 204
+2023-07-28 19:13:21.166 +00:00 [INF] Response sent: 204
+2023-07-28 19:13:21.211 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:13:21.230 +00:00 [INF] Request received: GET /api/products/getProductDetails/1
+2023-07-28 19:13:21.795 +00:00 [INF] Response sent: 200
+2023-07-28 19:13:21.817 +00:00 [INF] Response sent: 200
+2023-07-28 19:14:37.108 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:14:37.108 +00:00 [INF] Request received: OPTIONS /api/products/getProductsBySeller
+2023-07-28 19:14:37.130 +00:00 [INF] Response sent: 204
+2023-07-28 19:14:37.132 +00:00 [INF] Response sent: 204
+2023-07-28 19:14:37.238 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:14:37.240 +00:00 [INF] Request received: GET /api/products/getProductsBySeller
+2023-07-28 19:14:38.059 +00:00 [INF] Response sent: 200
+2023-07-28 19:14:38.135 +00:00 [INF] Response sent: 200
+2023-07-28 19:14:39.920 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersSeller
+2023-07-28 19:14:39.921 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersSeller
+2023-07-28 19:14:39.923 +00:00 [INF] Response sent: 204
+2023-07-28 19:14:39.929 +00:00 [INF] Response sent: 204
+2023-07-28 19:14:39.948 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:14:39.962 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:14:40.705 +00:00 [INF] Response sent: 200
+2023-07-28 19:14:40.705 +00:00 [INF] Response sent: 200
+2023-07-28 19:15:25.583 +00:00 [INF] Request received: POST /api/users/register
+2023-07-28 19:15:27.700 +00:00 [INF] Response sent: 200
+2023-07-28 19:15:33.408 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:15:34.521 +00:00 [INF] Response sent: 200
+2023-07-28 19:15:48.687 +00:00 [INF] Request received: OPTIONS /api/users/getSellers
+2023-07-28 19:15:48.691 +00:00 [INF] Response sent: 204
+2023-07-28 19:15:48.700 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:15:49.478 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:15:49.482 +00:00 [INF] Response sent: 200
+2023-07-28 19:15:49.810 +00:00 [INF] Response sent: 200
+2023-07-28 19:16:48.926 +00:00 [INF] Request received: OPTIONS /api/users/getSellers
+2023-07-28 19:16:48.992 +00:00 [INF] Response sent: 204
+2023-07-28 19:16:49.001 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:16:49.194 +00:00 [INF] Response sent: 200
+2023-07-28 19:18:26.321 +00:00 [INF] Request received: OPTIONS /api/users/getSellers
+2023-07-28 19:18:26.331 +00:00 [INF] Response sent: 204
+2023-07-28 19:18:26.348 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:18:26.835 +00:00 [INF] Response sent: 200
+2023-07-28 19:19:05.221 +00:00 [INF] Request received: OPTIONS /api/users/getSellers
+2023-07-28 19:19:05.231 +00:00 [INF] Response sent: 204
+2023-07-28 19:19:05.238 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:19:05.543 +00:00 [INF] Response sent: 200
+2023-07-28 19:19:10.678 +00:00 [INF] Request received: OPTIONS /api/users/verify/seller20/false
+2023-07-28 19:19:10.698 +00:00 [INF] Response sent: 204
+2023-07-28 19:19:10.771 +00:00 [INF] Request received: PUT /api/users/verify/seller20/false
+2023-07-28 19:19:14.368 +00:00 [INF] Response sent: 200
+2023-07-28 19:19:29.028 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:19:29.409 +00:00 [INF] Response sent: 200
+2023-07-28 19:19:31.475 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:19:31.477 +00:00 [INF] Response sent: 204
+2023-07-28 19:19:31.536 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:19:31.537 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:19:31.563 +00:00 [INF] Response sent: 204
+2023-07-28 19:19:31.586 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:19:32.619 +00:00 [INF] Response sent: 200
+2023-07-28 19:19:32.620 +00:00 [INF] Response sent: 200
+2023-07-28 19:19:33.909 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:19:33.911 +00:00 [INF] Response sent: 204
+2023-07-28 19:19:33.918 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:19:33.920 +00:00 [INF] Response sent: 204
+2023-07-28 19:19:33.950 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:19:33.966 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:19:34.686 +00:00 [INF] Response sent: 200
+2023-07-28 19:19:34.770 +00:00 [INF] Response sent: 200
+2023-07-28 19:20:04.678 +00:00 [INF] Request received: OPTIONS /api/orders/addOrder
+2023-07-28 19:20:04.681 +00:00 [INF] Response sent: 204
+2023-07-28 19:20:04.710 +00:00 [INF] Request received: POST /api/orders/addOrder
+2023-07-28 19:20:06.542 +00:00 [INF] Response sent: 200
+2023-07-28 19:20:08.864 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:20:08.864 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:20:08.866 +00:00 [INF] Response sent: 204
+2023-07-28 19:20:08.867 +00:00 [INF] Response sent: 204
+2023-07-28 19:20:08.934 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:20:08.938 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:20:09.650 +00:00 [INF] Response sent: 200
+2023-07-28 19:20:09.679 +00:00 [INF] Response sent: 200
+2023-07-28 19:20:10.618 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:20:10.617 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:20:10.621 +00:00 [INF] Response sent: 204
+2023-07-28 19:20:10.622 +00:00 [INF] Response sent: 204
+2023-07-28 19:20:10.634 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:20:10.639 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:20:11.077 +00:00 [INF] Response sent: 200
+2023-07-28 19:20:11.234 +00:00 [INF] Response sent: 200
+2023-07-28 19:21:44.695 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:21:44.695 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:21:44.729 +00:00 [INF] Response sent: 204
+2023-07-28 19:21:44.728 +00:00 [INF] Response sent: 204
+2023-07-28 19:21:44.867 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:21:44.912 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:21:45.748 +00:00 [INF] Response sent: 200
+2023-07-28 19:21:45.750 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:14.892 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersBuyer
+2023-07-28 19:23:14.904 +00:00 [INF] Response sent: 204
+2023-07-28 19:23:14.931 +00:00 [INF] Request received: GET /api/orders/getAllOrdersBuyer
+2023-07-28 19:23:15.252 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:21.649 +00:00 [INF] Request received: OPTIONS /api/products/getAllProducts
+2023-07-28 19:23:21.652 +00:00 [INF] Response sent: 204
+2023-07-28 19:23:21.660 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:23:22.314 +00:00 [INF] Request received: GET /api/products/getAllProducts
+2023-07-28 19:23:22.314 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:22.774 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:29.294 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:23:30.314 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:31.832 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersSeller
+2023-07-28 19:23:31.835 +00:00 [INF] Response sent: 204
+2023-07-28 19:23:31.850 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:23:32.375 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:32.384 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:23:32.523 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:33.842 +00:00 [INF] Request received: OPTIONS /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:23:33.844 +00:00 [INF] Request received: OPTIONS /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:23:33.845 +00:00 [INF] Response sent: 204
+2023-07-28 19:23:33.847 +00:00 [INF] Response sent: 204
+2023-07-28 19:23:33.864 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:23:33.865 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:23:34.873 +00:00 [INF] Response sent: 200
+2023-07-28 19:23:34.912 +00:00 [INF] Response sent: 200
+2023-07-28 19:24:38.894 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:24:39.391 +00:00 [INF] Response sent: 200
+2023-07-28 19:24:41.131 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersSeller
+2023-07-28 19:24:41.134 +00:00 [INF] Response sent: 204
+2023-07-28 19:24:41.227 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:24:41.710 +00:00 [INF] Response sent: 200
+2023-07-28 19:24:41.845 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:24:42.236 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:10.328 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrdersSeller
+2023-07-28 19:25:10.331 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:10.340 +00:00 [INF] Request received: GET /api/orders/getAllOrdersSeller
+2023-07-28 19:25:10.565 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:12.184 +00:00 [INF] Request received: OPTIONS /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:25:12.185 +00:00 [INF] Request received: OPTIONS /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:25:12.187 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:12.190 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:12.200 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:25:12.207 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsSeller/1/seller
+2023-07-28 19:25:12.907 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:13.069 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:20.214 +00:00 [INF] Request received: POST /api/users/login
+2023-07-28 19:25:20.508 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:21.827 +00:00 [INF] Request received: OPTIONS /api/users/getSellers
+2023-07-28 19:25:21.829 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:21.874 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:25:22.199 +00:00 [INF] Request received: GET /api/users/getSellers
+2023-07-28 19:25:22.201 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:22.593 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:23.901 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrders
+2023-07-28 19:25:23.903 +00:00 [INF] Request received: OPTIONS /api/orders/getAllOrders
+2023-07-28 19:25:23.905 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:23.907 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:23.938 +00:00 [INF] Request received: GET /api/orders/getAllOrders
+2023-07-28 19:25:24.008 +00:00 [INF] Request received: GET /api/orders/getAllOrders
+2023-07-28 19:25:24.475 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:24.543 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:25.511 +00:00 [INF] Request received: OPTIONS /api/orders/getOrderDetailsAdmin/1
+2023-07-28 19:25:25.511 +00:00 [INF] Request received: OPTIONS /api/orders/getOrderDetailsAdmin/1
+2023-07-28 19:25:25.513 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:25.517 +00:00 [INF] Response sent: 204
+2023-07-28 19:25:25.528 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsAdmin/1
+2023-07-28 19:25:25.529 +00:00 [INF] Request received: GET /api/orders/getOrderDetailsAdmin/1
+2023-07-28 19:25:26.217 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:26.217 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:38.324 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:25:38.325 +00:00 [INF] Request received: GET /api/users/getUserData
+2023-07-28 19:25:38.841 +00:00 [INF] Response sent: 200
+2023-07-28 19:25:39.233 +00:00 [INF] Response sent: 200

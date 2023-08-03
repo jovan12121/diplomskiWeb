@@ -51,7 +51,7 @@ function OrderPopupBuyer(props) {
       <TableRow>
         <TableCell align="center">{product.brand}</TableCell>
         <TableCell align="center">{product.model}</TableCell>
-        <TableCell align="center">{product.price}</TableCell>
+        <TableCell align="center">{product.price} RSD</TableCell>
         <TableCell align="center">{product.quantity}</TableCell>
         <TableCell align="center"><img width='60' height='60' src={imgUrl} alt="" /></TableCell>
       </TableRow>
@@ -86,7 +86,7 @@ function OrderPopupBuyer(props) {
                 <TableCell><b>Comment:</b></TableCell><TableCell>{props.order.comment}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell><b>Total price:</b></TableCell><TableCell>{props.order.totalPrice}</TableCell>
+                <TableCell><b>Total price:</b></TableCell><TableCell>{props.order.totalPrice} RSD</TableCell>
               </TableRow>
               <TableRow>
                 {props.order.cancelled ?

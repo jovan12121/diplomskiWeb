@@ -1,0 +1,137 @@
+name: dockercompose6681625038158109167
+services:
+  apigateway:
+    build:
+      context: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      dockerfile: ApiGateway/Dockerfile
+    container_name: apigateway
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: apigateway
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "8001"
+      protocol: tcp
+  mikroservis1:
+    build:
+      context: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      dockerfile: Mikroservis1/Dockerfile
+    container_name: user-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_HOST: userdb
+      DB_NAME: user
+      DB_SA_PASSWORD: password@12345#
+    image: mikroservis1
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "18002"
+      protocol: tcp
+  mikroservis2:
+    build:
+      context: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      dockerfile: Mikroservis2/Dockerfile
+    container_name: orderproduct-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      DB_HOST: productorderdb
+      DB_NAME: productorder
+      DB_SA_PASSWORD: password@12345#
+    image: mikroservis2
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "18003"
+      protocol: tcp
+  mikroservis3:
+    build:
+      context: C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices
+      dockerfile: Mikroservis3/Dockerfile
+    container_name: payments-api
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+    image: mikroservis3
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 80
+      protocol: tcp
+    - mode: ingress
+      target: 80
+      published: "18006"
+      protocol: tcp
+  productorderdb:
+    container_name: productorderdb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "18005"
+      protocol: tcp
+  productsorderswebapi-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - mikroservis2
+    - -app-port
+    - "80"
+    - -components-path
+    - /components
+    depends_on:
+      mikroservis2:
+        condition: service_started
+    image: daprio/daprd:latest
+    network_mode: service:mikroservis2
+  userdb:
+    container_name: userdb
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: password@12345#
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    networks:
+      backend: null
+    ports:
+    - mode: ingress
+      target: 1433
+      published: "18001"
+      protocol: tcp
+  users-dapr:
+    command:
+    - ./daprd
+    - -app-id
+    - mikroservis1
+    - -app-port
+    - "80"
+    - -components-path
+    - /components
+    depends_on:
+      mikroservis1:
+        condition: service_started
+    image: daprio/daprd:latest
+    network_mode: service:mikroservis1
+networks:
+  backend:
+    name: dockercompose6681625038158109167_backend

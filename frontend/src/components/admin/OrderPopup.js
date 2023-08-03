@@ -87,7 +87,7 @@ function OrderPopup(props) {
                 <TableCell><b>Comment:</b></TableCell><TableCell>{props.order.comment}</TableCell>
               </TableRow>
               <TableRow>
-                <TableCell><b>Total price:</b></TableCell><TableCell>{props.order.totalPrice}</TableCell>
+                <TableCell><b>Total price:</b></TableCell><TableCell>{props.order.totalPrice} RSD</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell><b>Buyer username:</b></TableCell><TableCell>{props.order.buyerUsername}</TableCell>

@@ -15,6 +15,7 @@ class Product {
       this.waterproof = data.waterproof;
       this.gender = data.gender;
       this.material = data.material;
+      
     }
   }
 export default Product;

@@ -40,19 +40,19 @@ function Header() {
       <Toolbar sx={{ justifyContent: "space-between" }}>
         <Box sx={{ display: "flex", alignItems: "center" }}>
           {userRole === "admin" && (
-            <Button component={Link} to="verification" color="inherit">
+            <Button component={Link} to="verification" color="inherit" >
               Verifications
             </Button>
           )}
 
           {userRole === "buyer" && (
-            <Button component={Link} to="neworder" color="inherit">
+            <Button component={Link} to="neworder" color="inherit" sx={{paddingRight:"20px"}}>
               New order
             </Button>
           )}
 
           {userRole === "admin" && (
-            <Button component={Link} to="allorders" color="inherit">
+            <Button component={Link} to="allorders" color="inherit" sx={{paddingLeft:"20px"}}>
               Orders
             </Button>
           )}
@@ -82,10 +82,10 @@ function Header() {
 
           {userRole === "seller" && verified === "true" && (
             <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Button component={Link} to="allproducts" color="inherit">
+              <Button component={Link} to="allproducts" color="inherit"sx={{paddingLeft:"20px"}}>
                 Add product
               </Button>
-              <Typography variant="body1" style={{ color: "green", marginLeft: "10px" }}>
+              <Typography variant="body1" style={{ color: "green" }} sx={{paddingLeft:"520px"}}>
                 Account verified!
               </Typography>
             </Box>
@@ -94,13 +94,13 @@ function Header() {
 
         <Box sx={{ display: "flex", alignItems: "center" }}>
           {userRole && (
-            <Button component={Link} to="profile" color="inherit">
+            <Button component={Link} to="profile" color="inherit" sx={{paddingRight:"20px"}}>
               Edit profile
             </Button>
           )}
 
           {userRole && isGoogleUser === "false" && (
-            <Button component={Link} to="changePassword" color="inherit">
+            <Button component={Link} to="changePassword" color="inherit" sx={{paddingRight:"20px"}}>
               Change password
             </Button>
           )}

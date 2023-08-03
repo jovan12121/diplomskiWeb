@@ -3,7 +3,7 @@ import { ChangeUserPassword } from "../../services/userService";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import { TextField, Button, Box } from "@mui/material";
-
+import SaveAsRoundedIcon from '@mui/icons-material/SaveAsRounded';
 function ChangePassword() {
   const nav = useNavigate();
   const [errorMessages, setErrorMessages] = useState({});
@@ -86,7 +86,7 @@ function ChangePassword() {
               {renderErrorMessage("newPassword")}
             </div>
             <div className="m-2">
-              <Button type="outline" variant="contained" >
+              <Button type="outline" variant="contained" size="large" fullWidth startIcon={<SaveAsRoundedIcon/>}>
                 Change password
               </Button>
             </div>

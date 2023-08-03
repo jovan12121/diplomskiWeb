@@ -7,7 +7,7 @@ import { Button, Card, CardContent, Typography, Link, TextField } from '@mui/mat
 import { GoogleLogin } from "@react-oauth/google";
 import { toast } from 'react-toastify';
 import jwt_decode from "jwt-decode";
-
+import LoginRoundedIcon from '@mui/icons-material/LoginRounded';
 function Login() {
   const [errorMessages, setErrorMessages] = useState({});
   const navigate = useNavigate();
@@ -88,7 +88,7 @@ function Login() {
                   margin="normal"
                 />
                 {renderErrorMessage("password")}
-                <Button variant="contained" type="submit" className="mt-2" fullWidth>
+                <Button variant="contained" type="submit" className="mt-2" fullWidth startIcon={<LoginRoundedIcon/>}>
                   Login
                 </Button>
                 <div>

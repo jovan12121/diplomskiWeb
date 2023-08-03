@@ -4,14 +4,14 @@ import {Dialog,DialogContent,DialogTitle,Button,Table,TableBody,TableCell,TableC
 import CloseIcon from "@mui/icons-material/Close";
 import DeleteIcon from "@mui/icons-material/Delete";
 import "../../style.css";
-
+import MoveToInboxIcon from '@mui/icons-material/MoveToInbox';
+import ClearIcon from '@mui/icons-material/Clear';
 function Cart({ items, onClearCart, onClose, removeItem }) {
     const nav = useNavigate();
     const [list, setList] = useState([]);
     const [sum, setSum] = useState(0);
     const [quantityCheck, setQuantityCheck] = useState(true);
     const [open, setOpen] = useState(true);
-
     useEffect(() => {
         setList(items);
         const total = items.reduce((accumulator, currentItem) => {
@@ -62,19 +62,6 @@ function Cart({ items, onClearCart, onClose, removeItem }) {
     };
 
     function handleClick(event) {
-        // event.preventDefault();
-        // var dataList = [];
-        // list.forEach((element) => {
-        //     dataList.push({ productId: element.product.id, orderQuantity: element.orderQuantity });
-        // });
-        // var data = {
-        //     products: dataList,
-        //     comment: event.target.comment.value,
-        //     address: event.target.address.value,
-        //     totalPrice: sum + countUniqueOwnerIds(list) * 300,
-        //     buyerUsername: localStorage.getItem("user"),
-        // };
-        // order(data);
         event.preventDefault();
         var dataList = [];
         list.forEach((element)=>
@@ -102,7 +89,7 @@ function Cart({ items, onClearCart, onClose, removeItem }) {
                 {list.length !== 0 && (
                     <>
                         <Box display="flex" justifyContent="flex-end" mb={2}>
-                            <Button onClick={onClearCart} variant="outlined" color="primary">
+                            <Button onClick={onClearCart} variant="outlined" startIcon={<ClearIcon/>}>
                                 Clear Cart
                             </Button>
                         </Box>
@@ -129,7 +116,7 @@ function Cart({ items, onClearCart, onClose, removeItem }) {
                                                     </TableCell>
                                                     <TableCell>{item.product.brand}</TableCell>
                                                     <TableCell>{item.product.model}</TableCell>
-                                                    <TableCell>{item.product.price}</TableCell>
+                                                    <TableCell>{item.product.price} RSD</TableCell>
                                                     <TableCell>
                                                         <input
                                                             type="number"
@@ -145,9 +132,7 @@ function Cart({ items, onClearCart, onClose, removeItem }) {
                                                             onClick={() => {
                                                                 remove(item.product.id);
                                                                 removeItem(item.product.id);
-                                                            }}
-                                                            color="primary"
-                                                        >
+                                                            }}>
                                                             <DeleteIcon />
                                                         </IconButton>
                                                     </TableCell>
@@ -163,26 +148,25 @@ function Cart({ items, onClearCart, onClose, removeItem }) {
                                         <TableCell>
                                             <b>Sum:</b>
                                         </TableCell>
-                                        <TableCell>{sum}</TableCell>
+                                        <TableCell>{sum} RSD</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell>
                                             <b>Delivery Costs:</b>
                                         </TableCell>
-                                        <TableCell>{countUniqueOwnerIds(list) * 300}</TableCell>
+                                        <TableCell>{countUniqueOwnerIds(list) * 300} RSD</TableCell>
                                     </TableRow>
                                     <TableRow>
                                         <TableCell>
                                             <b>Total: </b>
                                         </TableCell>
-                                        <TableCell>{sum + countUniqueOwnerIds(list) * 300}</TableCell>
+                                        <TableCell>{sum + countUniqueOwnerIds(list) * 300} RSD</TableCell>
                                     </TableRow>
                                 </TableBody>
                             </Table>
                             {sum > 0 && quantityCheck && (
                                 <>
-
-                                    <Button type="submit" variant="contained" color="success" className="mt-3">
+                                    <Button type="submit" variant="contained" className="mt-3" fullWidth size="large" startIcon={<MoveToInboxIcon/>}>
                                         Order
                                     </Button>
                                 </>

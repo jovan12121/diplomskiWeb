@@ -4,6 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { RegisterGoogle } from "../../services/userService";
 import { TextField, Button, Box,Card, CardContent,Container } from "@mui/material";
 import jwt_decode from "jwt-decode";
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 
 function GoogleRegister() {
   const [errorMessages, setErrorMessages] = useState({});
@@ -134,7 +135,8 @@ function GoogleRegister() {
               label="Name"
               variant="outlined"
               fullWidth
-              defaultValue={name}
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
             {renderErrorMessage("name")}
             <TextField
@@ -143,7 +145,8 @@ function GoogleRegister() {
               label="Lastname"
               variant="outlined"
               fullWidth
-              defaultValue={lastname}
+              value={lastname}
+              onChange={(e) => setLastname(e.target.value)}
             />
             {renderErrorMessage("lastname")}
             <TextField
@@ -178,7 +181,7 @@ function GoogleRegister() {
               />
               {renderErrorMessage("picture")}
             </Box>
-            <Button variant="contained" type="submit" fullWidth>
+            <Button variant="contained" type="submit" fullWidth startIcon={<AccountCircleRoundedIcon/>}>
               Register
             </Button>
           </Box>

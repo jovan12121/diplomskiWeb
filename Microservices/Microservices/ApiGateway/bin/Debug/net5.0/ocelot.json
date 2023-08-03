@@ -313,7 +313,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "orderproduct-api",
+          "Host": "payments-api",
           "Port": 80
         }
       ],
@@ -326,7 +326,7 @@
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
         {
-          "Host": "orderproduct-api",
+          "Host": "payments-api",
           "Port": 80
         }
       ],

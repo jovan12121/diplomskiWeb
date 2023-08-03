@@ -5,7 +5,7 @@ import { PayWithStripe } from "../../services/paymentService";
 import { useNavigate } from "react-router-dom";
 import { AddOrder } from "../../services/ordersService";
 import { toast } from "react-toastify";
-
+import PaymentRoundedIcon from '@mui/icons-material/PaymentRounded';
 function StripePaymentForm ({ totalPrice, products, address, comment }) {
   const stripe = useStripe();
   const elements = useElements();
@@ -53,7 +53,7 @@ function StripePaymentForm ({ totalPrice, products, address, comment }) {
   return (
     <form onSubmit={handleSubmit}>
       <CardElement options={{ style: { base: { fontSize: "20px" } } }} />
-      <Button variant="contained" color="primary" size="large" type="submit" sx={{ marginTop: 2 }}>
+      <Button variant="contained" color="primary" size="large" type="submit" sx={{ marginTop: 2 }} startIcon={<PaymentRoundedIcon/>}>
         Confirm Payment
       </Button>
       {paymentError && <p>{paymentError}</p>}

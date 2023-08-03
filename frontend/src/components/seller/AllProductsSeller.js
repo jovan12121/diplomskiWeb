@@ -127,7 +127,7 @@ function AllProductsSeller() {
                   <TableCell style={{ textAlign: "center" }}>{product.brand}</TableCell>
                   <TableCell style={{ textAlign: "center" }}>{product.model}</TableCell>
                   <TableCell style={{ textAlign: "center" }}>{product.quantity}</TableCell>
-                  <TableCell style={{ textAlign: "center" }}>{product.price}</TableCell>
+                  <TableCell style={{ textAlign: "center" }}>{product.price} RSD</TableCell>
                   <TableCell style={{ textAlign: "center" }}>
                     <img width="60" height="60" src={"data:image/png;base64," + product.profilePicture} alt="" />
                   </TableCell>

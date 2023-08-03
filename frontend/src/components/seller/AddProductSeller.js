@@ -4,7 +4,7 @@ import { AddProduct } from "../../services/productService";
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button, FormControl, Grid, InputLabel, MenuItem, Select, TextField } from '@mui/material';
-
+import AddCircleOutlineRoundedIcon from '@mui/icons-material/AddCircleOutlineRounded';
 function AddProductSeller() {
   const [errorMessages, setErrorMessages] = useState({});
   const [file, setFile] = useState(null);
@@ -186,7 +186,7 @@ function AddProductSeller() {
             <div className="m-2">
               <FormControl fullWidth>
                 <InputLabel>Gender</InputLabel>
-                <Select value={gender} onChange={handleGenderChange} name="gender">
+                <Select value={gender} onChange={handleGenderChange} name="gender" label="Gender">
                   <MenuItem value="Men">Men</MenuItem>
                   <MenuItem value="Women">Women</MenuItem>
                   <MenuItem value="Unisex">Unisex</MenuItem>
@@ -197,7 +197,7 @@ function AddProductSeller() {
             <div className="m-2">
               <FormControl fullWidth>
                 <InputLabel>Bracelet Material</InputLabel>
-                <Select value={braceletMaterial} onChange={handleBraceletMaterialChange} name="braceletMaterial">
+                <Select value={braceletMaterial} onChange={handleBraceletMaterialChange} name="braceletMaterial" label="Bracelet Material">
                   <MenuItem value="Leather">Leather</MenuItem>
                   <MenuItem value="Steel">Steel</MenuItem>
                   <MenuItem value="Gold">Gold</MenuItem>
@@ -210,7 +210,7 @@ function AddProductSeller() {
             <div className="m-2">
               <FormControl fullWidth>
                 <InputLabel>Mechanism</InputLabel>
-                <Select value={mechanism} onChange={handleMechanismChange} name="mechanism">
+                <Select value={mechanism} onChange={handleMechanismChange} name="mechanism" label="Mechanism">
                   <MenuItem value="Automatic">Automatic</MenuItem>
                   <MenuItem value="Quartz">Quartz</MenuItem>
                   <MenuItem value="Mechanical">Mechanical</MenuItem>
@@ -223,7 +223,7 @@ function AddProductSeller() {
             <div className="m-2">
               <FormControl fullWidth>
                 <InputLabel>Warranty</InputLabel>
-                <Select value={warranty} onChange={handleWarrantyChange} name="warranty">
+                <Select value={warranty} onChange={handleWarrantyChange} name="warranty" label="Warranty">
                   <MenuItem value="None">None</MenuItem>
                   <MenuItem value="1 year">1 year</MenuItem>
                   <MenuItem value="2 years">2 years</MenuItem>
@@ -237,7 +237,7 @@ function AddProductSeller() {
             <div className="m-2">
               <FormControl fullWidth>
                 <InputLabel>Waterproof</InputLabel>
-                <Select value={waterproof} onChange={handleWaterproofChange} name="waterproof">
+                <Select value={waterproof} onChange={handleWaterproofChange} name="waterproof" label="Waterproof">
                   <MenuItem value="None">None</MenuItem>
                   <MenuItem value="50m">50m</MenuItem>
                   <MenuItem value="100m">100m</MenuItem>
@@ -250,7 +250,7 @@ function AddProductSeller() {
             <div className="m-2">
               <FormControl fullWidth>
                 <InputLabel>Material</InputLabel>
-                <Select value={material} onChange={handleMaterialChange} name="material">
+                <Select value={material} onChange={handleMaterialChange} name="material" label="Material">
                   <MenuItem value="Stainless Steel">Stainless Steel</MenuItem>
                   <MenuItem value="Titanium">Titanium</MenuItem>
                   <MenuItem value="Ceramic">Ceramic</MenuItem>
@@ -287,7 +287,7 @@ function AddProductSeller() {
               </div>
             </div>
             <div className="m-2">
-              <Button variant="contained" color="primary" type="submit">Add Product</Button>
+              <Button variant="contained" type="submit" fullWidth size="large" startIcon={<AddCircleOutlineRoundedIcon/>}>Add Product</Button>
             </div>
           </div>
         </Grid>

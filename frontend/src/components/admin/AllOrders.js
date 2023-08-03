@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import { GetAllOrders } from "../../services/ordersService";
 import OrderPopup from "./OrderPopup";
 import Order from "../model/Order";
-import { Paper,Table,TableHead,TableBody,TableRow,TableCell,Button,Container} from "@mui/material";
-
+import { Paper,Table,TableHead,TableBody,TableRow,TableCell,Button,Container,TableSortLabel} from "@mui/material";
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 function AllOrders() {
   const [sortConfig, setSortConfig] = useState(null);
   const [orders, setOrders] = useState([]);
@@ -64,60 +64,87 @@ function AllOrders() {
   }
 
   return (
-    <Container style={{ maxWidth: '80%' }}>
-        <Table component={Paper}>
+    <Container style={{ maxWidth: '85%' }}>
+      <Paper>
+        <Table >
           <TableHead>
             <TableRow>
-              <TableCell align="center" onClick={() => handleThClick("buyerUsername")}>
-                Buyer{" "}
-                {sortConfig && sortConfig.column === "buyerUsername" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>
-                )}
+              <TableCell align="center">
+              <TableSortLabel
+                active={sortConfig?.column === "buyerUsername"}
+                direction={sortConfig?.column === "buyerUsername" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("buyerUsername")}
+              >
+                Buyer
+              </TableSortLabel>
               </TableCell>
-              <TableCell align="center" onClick={() => handleThClick("timeOfOrder")}>
-                Time of order{" "}
-                {sortConfig && sortConfig.column === "timeOfOrder" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>
-                )}
+              <TableCell align="center">
+              <TableSortLabel
+                active={sortConfig?.column === "timeOfOrder"}
+                direction={sortConfig?.column === "timeOfOrder" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("timeOfOrder")}
+              >
+                Time of order
+                </TableSortLabel>
               </TableCell>
-              <TableCell align="center" onClick={() => handleThClick("timeForDelivery")}>
-                Delivery time(hours){" "}
-                {sortConfig && sortConfig.column === "timeForDelivery" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>
-                )}
+              <TableCell align="center">
+              <TableSortLabel
+                active={sortConfig?.column === "timeForDelivery"}
+                direction={sortConfig?.column === "timeForDelivery" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("timeForDelivery")}
+              >
+                Delivery time
+                </TableSortLabel>
               </TableCell>
-              <TableCell align="center" onClick={() => handleThClick("timeOfArrival")}>
-                Time of arrival{" "}
-                {sortConfig && sortConfig.column === "timeOfArrival" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>)
-                }
+              <TableCell align="center">
+              <TableSortLabel
+                active={sortConfig?.column === "timeOfArrival"}
+                direction={sortConfig?.column === "timeOfArrival" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("timeOfArrival")}
+              >
+                Time of arrival
+                </TableSortLabel>
               </TableCell>
-              <TableCell align="center" onClick={() => handleThClick("address")}>
-                Address{" "}
-                {sortConfig && sortConfig.column === "address" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>)
-                }
+              <TableCell align="center" >
+              <TableSortLabel
+                active={sortConfig?.column === "address"}
+                direction={sortConfig?.column === "address" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("address")}
+              >
+                Address
+                </TableSortLabel>
               </TableCell>
-              <TableCell align="center" onClick={() => handleThClick("comment")}>
-                Comment{" "}
-                {sortConfig && sortConfig.column === "comment" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>)
-                }
+              <TableCell align="center" >
+              <TableSortLabel
+                active={sortConfig?.column === "comment"}
+                direction={sortConfig?.column === "comment" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("comment")}
+              >
+                Comment
+          </TableSortLabel>
               </TableCell>
-              <TableCell align="center" onClick={() => handleThClick("totalPrice")}>
-                Total price{" "}
-                {sortConfig && sortConfig.column === "totalPrice" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>)
-                }
+              <TableCell align="center">
+              <TableSortLabel
+                active={sortConfig?.column === "totalPrice"}
+                direction={sortConfig?.column === "totalPrice" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("totalPrice")}
+              >
+                Total price
+                </TableSortLabel>
+
               </TableCell>
               <TableCell align="center">
                   Payment Method
               </TableCell>
-              <TableCell align="center" onClick={() => handleThClick("status")}>
-                Status{" "}
-                {sortConfig && sortConfig.column === "status" && (
-                  <span>{sortConfig.direction === "asc" ? "▲" : "▼"}</span>)
-                }
+              <TableCell align="center">
+              <TableSortLabel
+                active={sortConfig?.column === "status"}
+                direction={sortConfig?.column === "status" ? sortConfig.direction : "asc"}
+                onClick={() => handleThClick("status")}
+              >
+                Status
+                </TableSortLabel>
+
               </TableCell>
               <TableCell align="center">Actions</TableCell>
             </TableRow>
@@ -131,13 +158,14 @@ function AllOrders() {
                 <TableCell align="center">{order.getDateTime(order.timeOfArrival)}</TableCell>
                 <TableCell align="center">{order.address}</TableCell>
                 <TableCell align="center">{order.comment}</TableCell>
-                <TableCell align="center">{order.totalPrice}</TableCell>
+                <TableCell align="center">{order.totalPrice} RSD</TableCell>
                 <TableCell align="center">{order.paymentMethod}</TableCell>
                 <TableCell align="center">{order.getOrderStatus()}</TableCell>
                 <TableCell align="center">
                   <Button
                     variant="outlined"
                     onClick={() => handleOrderClick(order)}
+                    startIcon={<InfoRoundedIcon/>}
                   >
                     Details
                   </Button>
@@ -146,6 +174,7 @@ function AllOrders() {
             ))}
           </TableBody>
         </Table>
+        </Paper>
       {selectedOrder && <OrderPopup order={selectedOrder} onClose={onClose} />}
     </Container>
   );

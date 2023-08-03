@@ -52,7 +52,16 @@ services:
      - DB_HOST=productorderdb
      - DB_NAME=productorder
      - DB_SA_PASSWORD=password@12345#
-
+  mikroservis3:
+    container_name: payments-api
+    image: ${DOCKER_REGISTRY-}mikroservis3
+    build:
+      context: .
+      dockerfile: Mikroservis3/Dockerfile
+    networks:
+        - backend
+    ports:
+        - 18006:80
 
   apigateway:
     container_name: apigateway
@@ -77,3 +86,5 @@ services:
     depends_on:
       - mikroservis1
     network_mode: "service:mikroservis1"
+
+

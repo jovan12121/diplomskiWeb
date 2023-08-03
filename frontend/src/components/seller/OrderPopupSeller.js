@@ -65,13 +65,13 @@ function OrderPopupSeller(props) {
     const imgUrl = `data:image/png;base64,${product.picture}`;
     return (
       <TableRow>
-        <TableCell>{product.brand}</TableCell>
-        <TableCell>{product.model}</TableCell>
-        <TableCell>{product.price}</TableCell>
-        <TableCell>{product.quantity}</TableCell>
-        <TableCell>{product.orderQuantity}</TableCell>
-        <TableCell>
-          <img width="40" height="40" src={imgUrl} alt="" />
+        <TableCell align="center">{product.brand}</TableCell>
+        <TableCell align="center">{product.model}</TableCell>
+        <TableCell align="center">{product.price} RSD</TableCell>
+        <TableCell align="center">{product.quantity}</TableCell>
+        <TableCell align="center">{product.orderQuantity}</TableCell>
+        <TableCell align="center">
+          <img width="60" height="60" src={imgUrl} alt="" />
         </TableCell>
       </TableRow>
     );
@@ -129,7 +129,7 @@ function OrderPopupSeller(props) {
                 <TableCell>
                   <b>Total price:</b>
                 </TableCell>
-                <TableCell>{props.order.totalPrice}</TableCell>
+                <TableCell>{props.order.totalPrice} RSD</TableCell>
               </TableRow>
               <TableRow>
                 <TableCell>
@@ -172,12 +172,12 @@ function OrderPopupSeller(props) {
           <Table>
             <TableHead>
               <TableRow>
-                <TableCell>Brand</TableCell>
-                <TableCell>Model</TableCell>
-                <TableCell>Price</TableCell>
-                <TableCell>In stock</TableCell>
-                <TableCell>Order Quantity</TableCell>
-                <TableCell>Picture</TableCell>
+                <TableCell align="center">Brand</TableCell>
+                <TableCell align="center">Model</TableCell>
+                <TableCell align="center">Price</TableCell>
+                <TableCell align="center">In stock</TableCell>
+                <TableCell align="center">Order Quantity</TableCell>
+                <TableCell align="center">Picture</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>

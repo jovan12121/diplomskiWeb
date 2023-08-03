@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { GetProductDetails } from "../../services/productService";
-import {Dialog,DialogTitle,DialogContent,DialogActions,Button,Typography,Table,TableContainer,TableBody,TableCell,TableRow} from "@mui/material";
+import {Dialog,DialogTitle,DialogContent,DialogActions,Button,Typography,Table,TableContainer,TableBody,TableCell,TableRow,IconButton } from "@mui/material";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useNavigate } from "react-router-dom";
+import CloseIcon from "@mui/icons-material/Close";
+import EditRoundedIcon from '@mui/icons-material/EditRounded';
 
 function formatDate(dateString) {
   const date = new Date(dateString);
@@ -35,10 +37,12 @@ function ProductPopup({ productId, onClose }) {
   };
 
   return (
-    <Dialog open={!!product} onClose={handleClose} maxWidth="sm" fullWidth>
+    <Dialog open={!!product} maxWidth="sm" fullWidth>
       {product && (
         <>
-          <DialogTitle>{product.brand} - {product.model}</DialogTitle>
+          <DialogTitle>{product.brand} - {product.model}  <IconButton aria-label="close" onClick={handleClose} sx={{ position: 'absolute', right: 8, top: 8 }}>
+          <CloseIcon />
+        </IconButton></DialogTitle>
           <DialogContent>
             <Carousel>
               <div>
@@ -71,7 +75,7 @@ function ProductPopup({ productId, onClose }) {
                       <Typography variant="body1"><b>Price:</b></Typography>
                     </TableCell>
                     <TableCell>
-                      <Typography variant="body1">{product.price}</Typography>
+                      <Typography variant="body1">{product.price} RSD</Typography>
                     </TableCell>
                   </TableRow>
                   <TableRow>
@@ -151,10 +155,10 @@ function ProductPopup({ productId, onClose }) {
             </TableContainer>
           </DialogContent>
           <DialogActions>
-            <Button onClick={handleClose} color="secondary">
+            {/* <Button onClick={handleClose} color="secondary">
               Close
-            </Button>
-            <Button variant="contained" onClick={() => handleEdit(product.Id)} color="primary">
+            </Button> */}
+            <Button variant="contained" onClick={() => handleEdit(product.Id)} startIcon={<EditRoundedIcon/>}>
               Edit
             </Button>
           </DialogActions>

@@ -5,7 +5,7 @@ import { AddOrder } from "../../services/ordersService";
 import { toast } from "react-toastify";
 import StripePaymentForm from "./StripePaymentForm";
 import PayPalPaymentForm from "./PaypalPaymentForm";
-
+import LocalAtmRoundedIcon from '@mui/icons-material/LocalAtmRounded';
 function Payment() {
     const nav = useNavigate();
     const location = useLocation();
@@ -33,7 +33,7 @@ function Payment() {
     }
     return (
         <Container>
-            <Typography variant="h4" align="center">Total price:{totalPrice}</Typography>
+            <Typography variant="h4" align="center">Total price:{totalPrice} RSD</Typography>
             <FormControl sx={{ width: "100%", marginTop: 2, marginBottom: 2 }}>
                 <InputLabel htmlFor="payment-method">Payment Method</InputLabel>
                 <Select
@@ -52,7 +52,7 @@ function Payment() {
             </FormControl>
             {paymentMethod === "cash" && <br /> &&
                 <div style={{textAlign:"center"}}>
-                <Button variant="contained" color="primary" size="large" type="submit" onClick={handleClick}>
+                <Button variant="contained" color="primary" size="large" type="submit" onClick={handleClick} startIcon={<LocalAtmRoundedIcon/>}>
                     Confirm Payment
                 </Button>
                 </div>}

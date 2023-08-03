@@ -5,7 +5,7 @@ import OrderSeller from "../model/OrderSeller";
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button, Container } from "@mui/material";
 import { TableSortLabel } from "@mui/material";
 import TimelapseIcon from '@mui/icons-material/Timelapse';
-
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 function AllOrdersSeller() {
     const [sortConfig, setSortConfig] = useState(null);
     const [orders, setOrders] = useState([]);
@@ -77,7 +77,7 @@ function AllOrdersSeller() {
                 <TableCell align="center">{getDateTime(order.timeOfArrival)}</TableCell>
                 <TableCell align="center">{order.address}</TableCell>
                 <TableCell align="center">{order.comment}</TableCell>
-                <TableCell align="center">{order.totalPrice}</TableCell>
+                <TableCell align="center">{order.totalPrice} RSD</TableCell>
                 <TableCell align="center">{getOrderStatus(order)}</TableCell>
                 {order.status === 'In progress' && (
                     <TableCell align="center">
@@ -93,7 +93,7 @@ function AllOrdersSeller() {
                 {order.status === 'Cancelled' && <TableCell></TableCell>}
                 {order.status === 'Delivered' && <TableCell></TableCell>}
                 <TableCell align="center">
-                    <Button onClick={() => handleOrderClick(order)} variant="outlined">
+                    <Button onClick={() => handleOrderClick(order)} variant="outlined" startIcon={<InfoRoundedIcon/>}>
                         Details
                     </Button>
                 </TableCell>

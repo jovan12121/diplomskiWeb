@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { GetUserData, EditProfile } from "../../services/userService";
 import { TextField, Button, Box } from "@mui/material";
 import User from "../model/User";
-
+import SaveRoundedIcon from '@mui/icons-material/SaveRounded';
 function Profile() {
   const [errorMessages, setErrorMessages] = useState({});
   const [file, setFile] = useState(null);
@@ -258,8 +258,8 @@ function Profile() {
               onChange={handleFileChange}
             />
           </Box>
-          <Box display="flex" justifyContent="center" alignItems="center" mt={2}>
-            <Button variant="contained" type="submit">
+          <Box display="flex" justifyContent="center" alignItems="center" mt={2} >
+            <Button variant="contained" type="submit" fullWidth size="large" startIcon={<SaveRoundedIcon/>}>
               Save
             </Button>
           </Box>

@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { GetAllProducts } from "../../services/productService";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import "../../style.css";
-import {Card,Button,Container,Grid,Typography,CardMedia,CardContent,TableRow,Table,TableCell,TableBody,TextField} from "@mui/material";
+import { Card,Button,Container,Grid,Typography,CardMedia,CardContent,TableRow,Table,TableHead,TableBody,TableCell,TextField,} from "@mui/material";
 import Cart from "../buyer/Cart";
 import Product from "../model/Product";
 import WatchDetails from "./WatchDetailsBuyer";
-import { CSSTransition } from 'react-transition-group';
+import { CSSTransition } from "react-transition-group";
+import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded';
+import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
+import FilterAltRoundedIcon from '@mui/icons-material/FilterAltRounded';
+import FilterAltOffRoundedIcon from '@mui/icons-material/FilterAltOffRounded';
+import ClearRoundedIcon from '@mui/icons-material/ClearRounded';
 function NewOrder() {
   const [sortConfig, setSortConfig] = useState(null);
   const [products, setProducts] = useState([]);
@@ -35,6 +40,7 @@ function NewOrder() {
     maxPrice: "",
   });
 
+  const csstransitionRef = useRef(null); 
 
   function findIndex(itemId) {
     const index = cartItems.findIndex((item) => item.product.id === itemId);
@@ -45,7 +51,7 @@ function NewOrder() {
     const i = findIndex(itemId);
     const list = cartItems;
     list.splice(i, 1);
-    setCartItems(list);
+    setCartItems([...list]); 
   }
 
   function addToCart(product, quantity) {
@@ -59,7 +65,7 @@ function NewOrder() {
     } else {
       const item = cartItems[i];
       item.orderQuantity = +item.orderQuantity + +quantity;
-      cartItems[i] = item;
+      setCartItems([...cartItems]);
     }
   }
 
@@ -97,14 +103,14 @@ function NewOrder() {
     return (
       <Card sx={{ width: 300, height: "100%", textAlign: "center" }} raised>
         <div onClick={handlePictureClick}>
-          <CardMedia component="img" height="250" image={imgUrl} alt={product.name} />
+          <CardMedia component="img" height="250" image={imgUrl} alt={product.name} className="mt-2" />
         </div>
         <CardContent>
           <Typography variant="h6">
             {product.brand} {product.model}
           </Typography>
           <Table>
-            <TableBody>
+            <TableHead>
               <TableRow>
                 <TableCell>
                   <Typography variant="body2">
@@ -112,9 +118,11 @@ function NewOrder() {
                   </Typography>
                 </TableCell>
                 <TableCell>
-                  <Typography variant="body2">{product.price}</Typography>
+                  <Typography variant="body2">{product.price} RSD</Typography>
                 </TableCell>
               </TableRow>
+            </TableHead>
+            <TableBody>
               <TableRow>
                 <TableCell rowSpan={2} sx={{ textAlign: "center" }} colSpan={2}>
                   {!isCartOpen && product.quantity > 0 && (
@@ -128,7 +136,7 @@ function NewOrder() {
                           className="mr-2"
                           label="Quantity"
                         />
-                        <Button variant="outlined" type="submit" sx={{ mt: 2, width: "100%" }}>
+                        <Button variant="outlined" type="submit" sx={{ mt: 2, width: "100%" }} startIcon={<AddShoppingCartRoundedIcon/>}>
                           Add to cart
                         </Button>
                       </form>
@@ -146,7 +154,7 @@ function NewOrder() {
                           label="Quantity"
                           disabled
                         />
-                        <Button variant="outlined" type="submit" sx={{ mt: 2, width: "100%" }} disabled>
+                        <Button variant="outlined" type="submit" sx={{ mt: 2, width: "100%" }} disabled startIcon={<AddShoppingCartRoundedIcon/>}>
                           Add to cart
                         </Button>
                       </form>
@@ -168,22 +176,25 @@ function NewOrder() {
   const handleCartClose = () => {
     setIsCartOpen(false);
   };
+
   const handleFilterChange = (event) => {
     const { name, value } = event.target;
-  
+
     setIsFiltering(true);
-  
+
     setTimeout(() => {
       setFilterValues((prevState) => ({
         ...prevState,
         [name]: value,
       }));
-      setIsFiltering(false); 
-    }, 300); 
+      setIsFiltering(false);
+    }, 300);
   };
+
   const handleToggleFilters = () => {
     setIsFilterVisible((prevState) => !prevState);
   };
+
   const handleResetFilter = () => {
     setFilterValues({
       gender: "",
@@ -196,7 +207,8 @@ function NewOrder() {
       minPrice: "",
       maxPrice: "",
     });
-  }
+  };
+
   const sortedProducts = [...products].sort((product1, product2) => {
     if (!sortConfig) {
       return 0;
@@ -212,6 +224,7 @@ function NewOrder() {
     }
     return 0;
   });
+
   const filteredProducts = sortedProducts.filter((product) => {
     const { gender, brand, caseDiameter, braceletMaterial, waterproof, mechanism, warranty, minPrice, maxPrice } = filterValues;
 
@@ -244,11 +257,12 @@ function NewOrder() {
     }
     return true;
   });
+
   const handleSortingChange = (event) => {
     const { value } = event.target;
     let column = "";
     let direction = "";
-  
+
     switch (value) {
       case "date":
         column = "date";
@@ -265,20 +279,18 @@ function NewOrder() {
       default:
         break;
     }
-  
+
     setIsSorting(true);
-  
+
     setTimeout(() => {
       setSortConfig({ column, direction });
-      setIsSorting(false); 
+      setIsSorting(false);
     }, 300);
   };
 
   return (
-    <Container style={{ maxWidth: '80%' }}>
-
-
-      <Grid container spacing={1} className={isFilterVisible ? 'filter-options show' : 'filter-options hide'}>
+    <Container style={{ maxWidth: "80%" }}>
+      <Grid container spacing={1} className={isFilterVisible ? "filter-options show" : "filter-options hide"}>
         <Grid item xs={12} sm={4} md={2}>
           <FormControl sx={{ mt: 2, minWidth: 175 }}>
             <InputLabel id="gender-select-label">Gender</InputLabel>
@@ -288,6 +300,7 @@ function NewOrder() {
               name="gender"
               value={filterValues.gender}
               onChange={handleFilterChange}
+              label="Gender"
             >
               {genderFilters && genderFilters.map((genderOption) => (
                 <MenuItem key={genderOption} value={genderOption}>
@@ -307,6 +320,7 @@ function NewOrder() {
               name="brand"
               value={filterValues.brand}
               onChange={handleFilterChange}
+              label="Brand"
             >
               <MenuItem value="">All</MenuItem>
               {brandFilters && brandFilters.map((brandOption) => (
@@ -326,6 +340,7 @@ function NewOrder() {
               name="waterproof"
               value={filterValues.waterproof}
               onChange={handleFilterChange}
+              label="Waterproof"
             >
               <MenuItem value="">All</MenuItem>
               {waterproofFilters && waterproofFilters.map((waterproofOption) => (
@@ -345,6 +360,7 @@ function NewOrder() {
               name="warranty"
               value={filterValues.warranty}
               onChange={handleFilterChange}
+              label="Warranty"
             >
               <MenuItem value="">All</MenuItem>
               {warrantyFilters && warrantyFilters.map((warrantyOption) => (
@@ -362,6 +378,7 @@ function NewOrder() {
               labelId="braceletMaterial-select-label"
               id="braceletMaterial-select"
               name="braceletMaterial"
+              label="Bracelet Material"
               value={filterValues.braceletMaterial}
               onChange={handleFilterChange}
             >
@@ -383,6 +400,7 @@ function NewOrder() {
               name="caseDiameter"
               value={filterValues.caseDiameter}
               onChange={handleFilterChange}
+              label="Case Diameter"
             >
               <MenuItem value="">All</MenuItem>
               {caseDiameterFilters && caseDiameterFilters.map((caseDiameterOption) => (
@@ -402,6 +420,7 @@ function NewOrder() {
               name="mechanism"
               value={filterValues.mechanism}
               onChange={handleFilterChange}
+              label="Mechanism"
             >
               <MenuItem value="">All</MenuItem>
               {mechanismFilters && mechanismFilters.map((mechanismOption) => (
@@ -450,7 +469,7 @@ function NewOrder() {
         </Grid>
         <Grid item xs={12} sm={4} md={2}>
           <FormControl sx={{ mt: 2, width: 175 }}>
-            <Button variant="outlined" color="primary" style={{ height: '56px' }} onClick={handleResetFilter}>
+            <Button variant="outlined" color="primary" style={{ height: '56px' }} onClick={handleResetFilter} startIcon={<ClearRoundedIcon/>}>
               Reset Filters
             </Button>
           </FormControl>
@@ -465,6 +484,7 @@ function NewOrder() {
             style={{ height: '56px' }}
             onClick={handleToggleFilters}
             className="mt-3"
+            startIcon={isFilterVisible ? <FilterAltOffRoundedIcon/>:<FilterAltRoundedIcon/>  }
           >
             {isFilterVisible ? 'Hide Filters' : 'Show Filters'}
           </Button>
@@ -472,8 +492,8 @@ function NewOrder() {
         <Grid item xs={12} md={6} style={{ display: 'flex', justifyContent: 'flex-end' }}>
           <FormControl sx={{ mt: 2, width: 250,mr:2 }}>
             <InputLabel id="sort-label">Sort by</InputLabel>
-            <Select labelId="sort-label" name="sortSelect" onChange={handleSortingChange}>
-              <MenuItem value="date">Date</MenuItem>
+            <Select labelId="sort-label" name="sortSelect" onChange={handleSortingChange} label="Sort by">
+              <MenuItem value="date" >Date</MenuItem>
               <MenuItem value="price-lower">Price:from lower to higher</MenuItem>
               <MenuItem value="price-higher">Price:from higher to lower</MenuItem>
             </Select>
@@ -481,27 +501,27 @@ function NewOrder() {
         </Grid>
       </Grid>
       <Grid container spacing={1} mt={1}>
-  {filteredProducts.map((product, index) => (
-    <CSSTransition
-      key={product.id}
-      in={!isFiltering && !isSorting}
-      classNames="fade"
-      timeout={300}
-      unmountOnExit
-      appear
-    >
-      <Grid item xs={12} sm={12} md={4} lg={3}>
-        <ShowProduct product={product} />
+        {filteredProducts.map((product, index) => (
+          <CSSTransition
+            key={product.id}
+            nodeRef={csstransitionRef} 
+            in={!isFiltering && !isSorting}
+            classNames="fade"
+            timeout={300}
+            unmountOnExit
+            appear
+          >
+            <Grid item xs={12} sm={12} md={4} lg={3}>
+              <ShowProduct product={product} />
+            </Grid>
+          </CSSTransition>
+        ))}
       </Grid>
-    </CSSTransition>
-  ))}
-</Grid>
-
       <div
         className="text-center mt-3 position-sticky"
         style={{ position: "sticky", bottom: "20px", right: "20px", zIndex: "1000", textAlign: "center" }}
       >
-        <Button variant="contained" onClick={handleCartClick}>
+        <Button variant="contained" onClick={handleCartClick} startIcon={<ShoppingCartRoundedIcon />}>
           View Cart ({cartItems.length})
         </Button>
         {selectedProduct && (

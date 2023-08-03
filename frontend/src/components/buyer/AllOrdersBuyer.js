@@ -15,6 +15,8 @@ import {
   Paper
 } from "@mui/material";
 import TimelapseIcon from '@mui/icons-material/Timelapse';
+import CancelRoundedIcon from '@mui/icons-material/CancelRounded';
+import InfoRoundedIcon from '@mui/icons-material/InfoRounded';
 function AllOrdersBuyer() {
   const [sortConfig, setSortConfig] = useState(null);
   const [orders, setOrders] = useState([]);
@@ -104,7 +106,7 @@ function AllOrdersBuyer() {
         <>
           <TableCell align="center">In progress</TableCell>
           <TableCell align="center">
-            <Button variant="outlined" color="secondary" onClick={() => handleClickCancel(order.id)}>
+            <Button variant="outlined"  onClick={() => handleClickCancel(order.id)} startIcon={<CancelRoundedIcon/>}>
               Cancel
             </Button>
           </TableCell>
@@ -116,7 +118,7 @@ function AllOrdersBuyer() {
         <>
           <TableCell align="center">In progress</TableCell>
           <TableCell align="center">
-            <Button variant="outlined" color="secondary" disabled>
+            <Button variant="outlined" disabled startIcon={<CancelRoundedIcon/>}>
               Cancel
             </Button>
           </TableCell>
@@ -128,7 +130,7 @@ function AllOrdersBuyer() {
         <>
           <TableCell align="center">Delivered</TableCell>
           <TableCell align="center">
-            <Button variant="outlined" color="secondary" disabled>
+            <Button variant="outlined" disabled startIcon={<CancelRoundedIcon/>}>
               Cancel
             </Button>
           </TableCell>
@@ -171,7 +173,7 @@ function AllOrdersBuyer() {
         <TableCell align="center">{getDateTime(order.timeOfArrival)}</TableCell>
         <TableCell align="center">{order.address}</TableCell>
         <TableCell align="center">{order.comment}</TableCell>
-        <TableCell align="center">{order.totalPrice}</TableCell>
+        <TableCell align="center">{order.totalPrice} RSD</TableCell>
         <TableCell align="center">{order.paymentMethod}</TableCell>
         {getOrderStatus(order)}
         {order.status === "In progress" && (
@@ -185,7 +187,7 @@ function AllOrdersBuyer() {
         )}
         {order.status !== "In progress" && <TableCell align="center"></TableCell>}
         <TableCell align="center">
-          <Button variant="outlined" onClick={() => handleOrderClick(order)}>
+          <Button variant="outlined" onClick={() => handleOrderClick(order)} startIcon={<InfoRoundedIcon/>}>
             Details
           </Button>
         </TableCell>
@@ -194,8 +196,9 @@ function AllOrdersBuyer() {
   }
 
   return (
-    <Container style={{maxWidth:"80%"}}>
-      <Table component={Paper}>
+    <Container style={{maxWidth:"85%"}}>
+      <Paper>
+      <Table>
         <TableHead>
           <TableRow>
             <TableCell align="center">
@@ -275,6 +278,7 @@ function AllOrdersBuyer() {
           ))}
         </TableBody>
       </Table>
+      </Paper>
       {selectedOrder && <OrderPopupBuyer order={selectedOrder} onClose={onClose} />}
     </Container>
   );

@@ -80,7 +80,7 @@ namespace Mikroservis2
 
             services.AddScoped<IProductsService, ProductsService>();
             services.AddScoped<IOrdersService, OrdersService>();
-            services.AddScoped<IPaymentsService, PaymentService>();
+            //services.AddScoped<IPaymentsService, PaymentService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

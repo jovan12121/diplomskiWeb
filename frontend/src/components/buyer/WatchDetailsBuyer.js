@@ -4,6 +4,7 @@ import {Dialog,DialogTitle,DialogContent,DialogActions,Button,Typography,Table,T
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import CloseIcon from "@mui/icons-material/Close";
+import AddShoppingCartRoundedIcon from '@mui/icons-material/AddShoppingCartRounded';
 
 function WatchDetails({ productId, onClose, onAddToCart }) {
     const [product, setProduct] = useState(null);
@@ -38,7 +39,7 @@ function WatchDetails({ productId, onClose, onAddToCart }) {
                 <>
                     <DialogTitle>
                         {product.brand} - {product.model}
-                        <IconButton onClick={handleClose} color="secondary" sx={{ position: "absolute", top: 0, right: 0 }}>
+                        <IconButton onClick={handleClose}  sx={{ position: "absolute", top: 0, right: 0 }}>
                             <CloseIcon />
                         </IconButton>
                     </DialogTitle>
@@ -189,6 +190,7 @@ function WatchDetails({ productId, onClose, onAddToCart }) {
                                     color="primary"
                                     sx={{ ml: 2,height:"50px"}}
                                     type="submit"
+                                    startIcon={<AddShoppingCartRoundedIcon/>}
                                 >
                                     Add to cart
                                 </Button>

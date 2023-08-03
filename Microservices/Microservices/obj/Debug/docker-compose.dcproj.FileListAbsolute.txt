@@ -135,3 +135,9 @@ C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug
 C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\System.Security.Cryptography.ProtectedData.dll
 C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\PayPalHttp-Dotnet.dll
 C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\PayPalCheckoutSdk.dll
+C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\Mikroservis3.deps.json
+C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\Mikroservis3.runtimeconfig.json
+C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\Mikroservis3.runtimeconfig.dev.json
+C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\Mikroservis3.exe
+C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\Mikroservis3.dll
+C:\Users\jovan\Desktop\FAKS\WEB2\Diplomski\Microservices\Microservices\bin\Debug\Mikroservis3.pdb

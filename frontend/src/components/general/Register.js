@@ -6,7 +6,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { Button, Card, CardContent, Typography, Link, TextField, Select, MenuItem, FormControl, InputLabel, Container, Box } from '@mui/material';
 import { GoogleLogin } from "@react-oauth/google";
-
+import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
 function Register() {
   const [errorMessages, setErrorMessages] = useState({});
   const [file, setFile] = useState(null);
@@ -251,10 +251,10 @@ function Register() {
                 }}
               />
               {renderErrorMessage("picture")}
-              <Button variant="outlined" type="submit" fullWidth>
+              <Button variant="contained" type="submit" fullWidth size="large" startIcon={<AccountCircleRoundedIcon/>}>
                 Register
               </Button>
-              <Typography variant="body1" component="div">
+              <Typography variant="body1" component="div" className="mt-2">
                 Or register with Google:
               </Typography>
               <GoogleLogin onSuccess={googleLoginHandle} onError={googleLoginErrorHandle} />

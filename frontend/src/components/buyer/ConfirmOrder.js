@@ -1,7 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { TableContainer, Table, TableHead, TableBody, TableRow, Paper, TableCell, Container, TextField, Button,FormControl } from "@mui/material";
-
+import CheckRoundedIcon from '@mui/icons-material/CheckRounded';
 function ConfirmOrder() {
   const nav = useNavigate();
   const location = useLocation();
@@ -58,14 +58,14 @@ function ConfirmOrder() {
                   <TableCell align="center">{item.productBrand}</TableCell>
                   <TableCell align="center">{item.productModel}</TableCell>
                   <TableCell align="center">{item.orderQuantity}</TableCell>
-                  <TableCell align="center">{item.price}</TableCell>
-                  <TableCell align="center">{item.total}</TableCell>
+                  <TableCell align="center">{item.price} RSD</TableCell>
+                  <TableCell align="center">{item.total} RSD</TableCell>
                 </TableRow>
               ))}
 
               <TableRow>
                 <TableCell colSpan={6} align="center">
-                  <h4>Total Price: {totalPrice}</h4>
+                  <h4>Total Price: {totalPrice} RSD</h4>
                 </TableCell>
               </TableRow>
               <TableRow>
@@ -84,7 +84,7 @@ function ConfirmOrder() {
               </TableRow>
               <TableRow>
                 <TableCell colSpan={6} align="center">
-                  <Button variant="contained" color="success" size="large" type="sumbit">
+                  <Button variant="contained" size="large" type="sumbit" startIcon={<CheckRoundedIcon/>}>
                     Confirm Order
                   </Button>
                 </TableCell>
